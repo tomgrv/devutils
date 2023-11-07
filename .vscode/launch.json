@@ -30,7 +30,7 @@
     "compounds": [
         {
             "name": "Platform",
-            "configurations": ["Laravel"],
+            "configurations": ["Artisan Serve"],
             "preLaunchTask": "dev-full",
             "postDebugTask": "dev-stop",
             "stopAll": true

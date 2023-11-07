@@ -9,7 +9,7 @@ fi
 
 # Check if the current Git command is a rebase
 if test "$GIT_COMMAND" = "rebase"; then
-    echo -e "\e[32m✔\e[0m Skip pre-commit hook during rebase"
+    echo "\e[32m✔\e[0m Skip pre-commit hook during rebase"
     exit 0
 fi
 

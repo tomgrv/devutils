@@ -8,6 +8,6 @@ if command -v tty >/dev/null 2>&1; then
 fi
 
 # Apply commitlint rules to the latest commit message
-echo -e "\e[34m→\e[0m Applying commitlint rules to the latest commit..."
-typeset var PLUGINS=$(cat package.json | npx jqn '.commitlint.extends' | tr -d "'[]:")
+echo "\e[34m→\e[0m Applying commitlint rules to the latest commit..."
+PLUGINS=$(cat package.json | npx jqn '.commitlint.extends' | tr -d "'[]:")
 npm list --gobal $PLUGINS 2>/dev/null 1>&2 || npm install --gobal $PLUGINS 2>/dev/null 1>&2 && npx commitlint --edit "$1" && npx devmoji -e

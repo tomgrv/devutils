@@ -15,6 +15,6 @@ isChanged() {
 # Checkout composer.lock or package-lock.json if changed
 if isChanged 'composer.lock' || isChanged 'package-lock.json'; then
   git checkout --theirs composer.lock package-lock.json && git add composer.lock package-lock.json
-  echo -e "\e[32mFiles <package-lock.json> or <composer.lock> changed.\e[0m"
-  echo -e "\e[32mRun composer/npm install to bring your dependencies up to date.\e[0m"
+  echo "\e[32mFiles <package-lock.json> or <composer.lock> changed.\e[0m"
+  echo "\e[32mRun composer/npm install to bring your dependencies up to date.\e[0m"
 fi

@@ -19,7 +19,7 @@ isRebase() {
 
 # Check if the current Git command is a rebase
 if test "$GIT_COMMAND" = "rebase"; then
-  echo -e "\e[32m✔\e[0m  Skip post-checkout hook during rebase."
+  echo "\e[32m✔\e[0m  Skip post-checkout hook during rebase."
   exit 0
 fi
 

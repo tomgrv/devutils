@@ -9,7 +9,7 @@ fi
 
 # Edit commit message
 if [ $(grep -cv -e '^#' -e '^$' .git/COMMIT_EDITMSG) -eq 0 ]; then
-  (exec </dev/tty && npx git-cz -e --hook || echo -e "\e[1m\e[31m!\e[0m Unable to start commitizen.") || echo -e "\e[1m\e[31m!\e[0m Commitizen failed."
+  (exec </dev/tty && npx git-cz -e --hook || echo "\e[1m\e[31m!\e[0m Unable to start commitizen.") || echo "\e[1m\e[31m!\e[0m Commitizen failed."
 else
-  echo -e "\e[34m→\e[0m Commitizen not relevant. Skipping..."
+  echo "\e[34m→\e[0m Commitizen not relevant. Skipping..."
 fi
